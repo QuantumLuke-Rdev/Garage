@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { map } from 'rxjs';
 import { Observable } from 'rxjs/internal/Observable';
 import { Car } from 'src/classes/car';
 
@@ -13,7 +14,15 @@ export class GarageService {
   constructor(private readonly http : HttpClient) { }
 
   getGarageList() : Observable<Car[]>{
-    return this.http.get<Car[]>(`http://localhost:3000/cars`)
+    return this.http.get<Car[]>(`http://localhost:3000/cars`).pipe(
+      map(cars =>
+          cars.map(car => {
+          let instance = new Car(car.license, car.model, car.brand)
+          instance.id = car.id;
+          return instance;
+        })
+      ),
+    )
   }
 
   addCar(car : Car) : Observable<Car>{

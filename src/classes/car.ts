@@ -1,5 +1,5 @@
 export class Car {
-    id : number = -1;
+    id : number = 0;
 
     license: string = '';
     model: string = '';
