@@ -1,0 +1,19 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <h1>New Car</h1>
+    <label for="license">License</label>
+    <input type="text" id="license" formControlName="license">
+    <br>
+    <br>
+    <label for="model">Model</label>
+    <input type="text" id="model" formControlName="model">
+    <br>
+    <br>
+    <label for="brand">Brand</label>
+    <input type="text" id="brand" formControlName="brand">
+    <br>
+    <br>
+    <div>
+        <button type="submit" [disabled]="form.invalid">Insert</button>
+        <button type="button" (click)="reset()">Reset</button>
+    </div>
+  </form>
