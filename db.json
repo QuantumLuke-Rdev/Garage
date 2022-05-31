@@ -1,0 +1,16 @@
+{
+  "cars": [
+    {
+      "license": "12 GHJ 44",
+      "model": "Enzo Ferrari",
+      "brand": "Ferrari",
+      "id": 1
+    },
+    {
+      "id": -1,
+      "license": "19 555 ty",
+      "model": "Lambo",
+      "brand": "Lamborghini"
+    }
+  ]
+}

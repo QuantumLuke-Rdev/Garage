@@ -29,7 +29,7 @@ export class CreateCarFormComponent implements OnInit{
 
   submit() : void {
     let car = new Car(this.form.value.license, this.form.value.model, this.form.value.brand);
-    this.service.addCar(car);
+    this.service.addCar(car).subscribe();
   }
 
   reset() : void {

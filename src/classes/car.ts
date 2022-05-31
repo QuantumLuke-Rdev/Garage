@@ -1,4 +1,6 @@
 export class Car {
+    id : number = -1;
+
     license: string = '';
     model: string = '';
     brand: string = '';

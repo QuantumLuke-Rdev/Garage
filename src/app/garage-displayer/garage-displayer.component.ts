@@ -1,4 +1,5 @@
 import { Component, OnInit, Output } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Car } from 'src/classes/car';
 import { GarageService } from '../garage.service';
 
@@ -9,13 +10,11 @@ import { GarageService } from '../garage.service';
 })
 export class GarageDisplayerComponent{
 
+  cars : Observable<Car[]>;
+
   constructor(
     private readonly service: GarageService
   ){
-
-  }
-
-  getList(): Car[]{
-    return this.service.getGarageList()
+    this.cars = service.getGarageList();
   }
 }
