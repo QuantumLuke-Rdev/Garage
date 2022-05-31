@@ -10,6 +10,8 @@ import { CreateCarFormComponent } from './create-car-form/create-car-form.compon
 import { GarageDisplayerComponent } from './garage-displayer/garage-displayer.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CarDetailsPageComponent } from './car-details-page/car-details-page.component';
+import { CarDetailsComponent } from './car-details/car-details.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CreateCarFormComponent,
     GarageDisplayerComponent,
     ErrorPageComponent,
+    CarDetailsPageComponent,
+    CarDetailsComponent,
   ],
   imports: [
     BrowserModule,
